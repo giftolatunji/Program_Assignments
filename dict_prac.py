@@ -59,3 +59,23 @@ def Full_price(Item1,Item2):
     print("Total price of", Item1 , "and" , Item2 ,"is", price)
 
 Full_price("Chicken","Beef")
+
+#Step 6
+
+shoe_inv = {"Jordan 13":1, "Yeezy":8, "Foamposite":18, "Air Max":6}
+
+def restock(shoe_name, multiplier):
+    newInv = shoe_inv[shoe_name] + multiplier
+    shoe_inv[shoe_name] = newInv
+    return shoe_inv
+
+restock("Yeezy", 3)
+
+def clearance_sale(shoe_name, discount):
+    newInv = shoe_inv[shoe_name] / discount
+    shoe_inv[shoe_name] = newInv
+    return shoe_inv
+
+
+clearance_sale("SB Drunk")
+print(shoe_inv)
